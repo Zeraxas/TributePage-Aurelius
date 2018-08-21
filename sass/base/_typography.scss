@@ -1,0 +1,58 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: $default-font-wight;
+    line-height: $default-line-height;
+    color: $black;
+}
+
+.primary-quote {
+    font-size: $h3;
+    color: $white;
+    line-height: $line-height-small;
+    font-weight: 200;
+    font-style: italic;
+
+    @include respond(phone) {
+        font-size: $h2-2;
+        font-weight: 300;
+    }
+}
+
+.primary-heading {
+    font-size: $h1;
+    color: $white;
+
+    @include respond(phone) {
+        font-size: $h1-2;
+    }
+}
+
+.secondary-heading {
+    font-size: $h2;
+
+    &::after {
+        content: "";
+        position: relative;
+        top: -.5rem;
+        display: block;
+        width: 5rem;
+        height: .5rem;
+        background-color: $gold;
+    }
+
+    &--white {
+        color: $white;
+    }
+}
+
+.tertiary-heading {
+    font-size: $h3;
+}
+
+.description {
+    font-size: $paragraph-font-size;
+
+    &--white {
+        color: $white;
+    }
+}

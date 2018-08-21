@@ -1,0 +1,171 @@
+.timeline {
+    max-width: 114rem;
+    margin: 0 auto;
+    position: relative;
+    padding: 10rem 4rem 20rem 4rem;
+
+    &::after {
+        content: "";
+        width: .5rem;
+        height: 90%;
+        background-color: $white;
+        @include absCenter();
+        border-radius: .5rem;
+    }
+        
+    &__block {
+        padding: 1rem 4rem;
+        width: 50%;
+        position: relative;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background-color: $white;
+            bottom: -1.1rem;
+            z-index: 1;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 25rem;
+            height: .5rem;
+            background-color: $white;
+            bottom: 0%;
+            right: 0%;
+        }
+
+        &--left {
+            left: 0;
+
+            &::after {
+                right: -1.2rem;
+            }
+
+            &::before {
+                bottom: 0%;
+                right: 0%;
+            }
+        }
+
+
+        &--right {
+            left: 50%;
+
+            &::after {
+                left: -1.2rem;
+            }
+
+            &::before {
+                bottom: -.2rem;
+                left: 0%;
+            }
+        }
+    }
+
+    &__block--left &__content::after {
+        top: 2.4rem;
+        left: -2.3rem;
+        transform: rotate(90deg)
+    }
+
+    &__block--left &__content::before {
+        top: 0;
+        left: 0
+    }
+
+    &__block--right &__content::after {
+        bottom: 0;
+        right: 0;
+    }
+
+    &__block--right &__content::before {
+        bottom: 2.3rem;
+        right: -2.3rem;
+        transform: rotate(90deg);
+    }
+
+    &__content {
+        padding: 1rem 3rem;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 5rem;
+            height: .5rem;
+            background-color: $gold;
+        }
+    }
+
+    &__block-heading {
+        margin-bottom: 1rem;
+    }
+
+    &__date {
+        color: $grey-darkest;
+        font-size: 1.9rem;
+        background-color: white;
+        margin-right: .5rem;
+        padding: 0 .5rem;
+    }
+
+    &__description {
+        font-size: 2rem;
+        line-height: 1.5;
+        color: $black-2;
+        margin-bottom: 1rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 10rem 4rem;
+
+        &::after {
+            left: 2rem;
+            height: 95%;
+        }
+
+        &__block {
+            width: 100%;
+            padding: 1rem 0rem 1rem 1rem;
+            margin-bottom: 2rem;
+
+            &::after {
+                bottom: -1.1rem;
+                left: -3.3rem;
+            }
+
+            &--left {
+    
+                &::before {
+                    bottom: -.2rem;
+                    left: -1rem;
+                }
+            }
+
+            &--right {
+                left: 0;
+    
+                &::before {
+                    bottom: -.2rem;
+                    left: -1rem;
+                }
+            }
+        }
+
+        &__content {
+            padding: 1rem 2rem;
+        }
+
+        &__block-heading {
+            font-size: 2.5rem;
+        }
+    }
+
+}

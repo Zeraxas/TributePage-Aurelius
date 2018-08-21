@@ -1,0 +1,63 @@
+.header {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: linear-gradient(to right, $grey-light, $grey-dark),
+                      url(../img/header-phone.jpg), 
+                      linear-gradient(to right, $brown, $brown);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include respond(phone) {
+        height: 70vh;
+    }
+
+    @include res-min-point(600, 192dpi) {
+        background-image: linear-gradient(to right, $grey-light, $grey-dark),
+                          url(../img/header-tablet.jpg), 
+                          linear-gradient(to right, $brown, $brown); 
+    }
+
+    @include res-min-point(900) {
+        background-image: linear-gradient(to right, $grey-light, $grey-dark),
+                          url(../img/header.jpg), 
+                          linear-gradient(to right, $brown, $brown);
+    }
+
+    &__title-box {
+        position: absolute;
+        top: 5rem;
+        right: 10rem;
+        text-shadow: 2px 2px 4px rgba($black, .5);
+
+        @include respond(phone) {
+            right: 2rem;
+        }
+    }
+
+    &__date {
+        position: absolute;
+        font-size: $h3;
+        right: 0;
+        bottom: -2rem;
+
+        @include respond(phone) {
+            bottom: -3rem;
+        }
+    }
+
+    &__quote-box {
+        position: absolute;
+        width: 50rem;
+        height: 15rem;
+        bottom: 5rem;
+        right: 10rem;
+
+        @include respond(phone) {
+            width: 100%;
+            right: 0;
+            padding: 0 2rem;
+            bottom: 8rem;
+        }
+    }
+}

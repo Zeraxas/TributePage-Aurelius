@@ -1,0 +1,54 @@
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin clearfix {
+    &::after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+}
+
+@mixin size($width,$height:$width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) {@content};   // 600px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) {@content};   // 900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) {@content};  // 1200px
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) {@content};  // 1800px
+    }
+}
+
+// Get value {$breakpoint} like = 900. Where 900 -> px; Convert px to em
+// Set min-resolution vie $resolution -> input forman 192dpi
+@mixin res-min-point($breakpoint, $resolution:"") {
+    @if $resolution != "" {
+        @media (min-resolution: $resolution) and (min-width: ($breakpoint/16) * 1em) {@content};
+    }
+    @if $resolution == "" {
+        @media only screen and (min-width: ($breakpoint/16) * 1em) {@content};
+    }  
+}
+
+@mixin res-max-point($breakpoint, $resolution:"") {
+    @if $resolution != "" {
+        @media (min-resolution: $resolution) and (max-width: ($breakpoint/16) * 1em) {@content};
+    }
+    @if $resolution == "" {
+        @media only screen and (max-width: ($breakpoint/16) * 1em) {@content};
+    }  
+}

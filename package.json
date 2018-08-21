@@ -1,0 +1,17 @@
+{
+  "name": "tribute_page_aurelius",
+  "version": "1.0.0",
+  "description": "Tribute page for Marcus Aurelius, created within FreeCodeCamp course",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass sass/main.scss --watch css/style.css"
+  },
+  "author": "Evgeniy Zhurichev",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  },
+  "dependencies": {
+    "typed.js": "^2.0.9"
+  }
+}

@@ -1,0 +1,51 @@
+.btn  {
+    font-size: $paragraph-font-size;
+    font-family: "Lato", sans-serif;
+
+    &:link,
+    &:visited {
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+        transition: all .2s;
+        padding: 0 .2rem;
+        // For button element
+        cursor: pointer;
+    }
+
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba($black, .2);
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba($black, .2);
+    }
+
+    &--gold {
+        border-bottom: .3rem solid $gold;
+        color: $black;
+
+        &:hover {
+            background-color: $gold;
+            color: $white;
+        }
+    }
+
+    &--white-gold {
+        border-bottom: .3rem solid $gold;
+        color: $white;
+
+        &:hover {
+            background-color: $gold;
+            color: $black;
+        }
+    }
+}
+
+.btn-link {
+    font-size: $paragraph-font-size;
+}

@@ -1,0 +1,48 @@
+// COLORS
+$white: #fbfbfb;
+$white-2: #F7F5FC;
+$black: #0C0C0C;
+$black-2: #1F2232;
+$gold: #c49102;
+
+$white-grey:#DFE0DF;
+$grey-darkest: #333;
+
+$grey-light: rgba(165, 165, 160, 0.50);
+$grey-light-2: rgba(123, 134, 133, 0.8);
+
+$grey-dark: rgba(165, 165, 160, 0.19);
+$grey-dark-2: rgba(246, 255, 254, 0.19);
+
+$brown: #2B1A0A;
+
+
+// TYPOGRAPHY
+
+$default-line-height: 1.7;
+$line-height-small: 1.3;
+$line-height-medium: 1.5;
+
+$default-font-wight: 400;
+
+// FONTS
+
+$default-font-size: 1.6rem;
+$quote-primary-size: 6rem;
+
+$h1: 8rem;
+$h1-2: 5rem;
+$h2: 4rem;
+$h2-2: 3.5rem;
+$h3: 3rem;
+$h4: 2rem;
+$paragraph-font-size: 2rem;
+$timeline-font-desc: 1.6rem;
+
+// GRID
+
+// 114rem -> 1140px / 10 where 10 our base font size
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
